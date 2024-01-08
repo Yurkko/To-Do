@@ -1,24 +1,15 @@
 import { NavLink, Navigate, useNavigate } from 'react-router-dom';
 import styles from './Navigation.module.scss';
-import { logoutUser } from '../../api/API';
+import { useAuth } from '../../hooks/useAuth';
 
-const Navigation = ({ isAuthorized, setIsAuthorized }) => {
-   const navigate = useNavigate();
+const Navigation = () => {
+   const { signout, isAuthorized } = useAuth();
+
    const getNavLinkClassName = ({ isActive }) =>
       isActive ? 'active-link' : '';
 
    const logOut = async () => {
-      try {
-         await logoutUser({
-            username: '',
-            password: '',
-            isAuthorized: false,
-         });
-      } catch (error) {
-         console.log(error);
-      }
-      setIsAuthorized(false);
-      navigate('/');
+      signout();
    };
 
    return (

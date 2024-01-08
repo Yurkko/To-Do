@@ -1,40 +1,25 @@
-import { Navigate, useNavigate } from 'react-router-dom';
 import styles from './LoginPage.module.scss';
-import { updateUser } from '../../api/API';
-import { useState } from 'react';
 
-const LoginPage = ({
-   errorUser,
-   isErrorUser,
-   isAuthorized,
-   isLoadingUser,
-   setIsAuthorized,
-}) => {
+import { useState } from 'react';
+import { useAuth } from '../../hooks/useAuth';
+import { useNavigate } from 'react-router-dom';
+
+const LoginPage = ({ errorUser, isErrorUser, isLoadingUser }) => {
    const [username, setUsername] = useState('');
    const [password, setPassword] = useState('');
    const navigate = useNavigate();
+   const { sigin, isAuthorized } = useAuth();
 
    const handleSubmit = async e => {
       e.preventDefault();
-      try {
-         await updateUser({
-            username: username,
-            password: password,
-            isAuthorized: true,
-         });
-      } catch (error) {
-         console.log(error);
-      }
-      setIsAuthorized(true);
-      navigate('/todo-list');
+      sigin(username, password);
    };
-
-   // if (isAuthorized) {
-   //    return <Navigate to="/" />;
-   // }
 
    if (isLoadingUser) {
       return <p style={{ textAlign: 'center' }}>Loading user data...</p>;
+   }
+   if (isAuthorized) {
+      navigate('/');
    }
 
    if (isErrorUser) {

@@ -1,14 +1,12 @@
+import { useAuth } from '../../hooks/useAuth';
 import Navigation from '../Navigation/Navigation';
 import styles from './Header.module.scss';
 
-const Header = ({ isAuthorized, setIsAuthorized }) => {
+const Header = () => {
    return (
       <header className={styles.header}>
          <div className={`${styles.header__container} container`}>
-            <Navigation
-               isAuthorized={isAuthorized}
-               setIsAuthorized={setIsAuthorized}
-            />
+            <Navigation />
          </div>
       </header>
    );
