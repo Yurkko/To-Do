@@ -1,5 +1,5 @@
 # ToDo list
-## Quick Overview
+## Quick Start
 
 ```sh
 npx i
