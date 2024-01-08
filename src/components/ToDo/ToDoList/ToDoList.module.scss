@@ -1,0 +1,55 @@
+@import '../../../utils/variables';
+
+.todo__list {
+   position: relative;
+   color: #fff;
+   padding: 10px;
+   border-radius: 10px;
+   background-color: var(--primary-bg);
+   border: 2px solid #4a5568;
+   margin-bottom: 10px;
+   &__ul {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+   }
+
+   &__li {
+      font-size: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      padding: 8px;
+      border-radius: 5px;
+      border: 2px solid #4a5568;
+      color: #000;
+      background: #fff;
+   }
+   &_name {
+      font-family: cursive;
+      font-weight: 500;
+      flex: 1 1 auto;
+   }
+   &__loading {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 10px;
+   }
+   &_delete_btn {
+      color: #fff;
+      background-color: #cb3b3b;
+      border-radius: 5px;
+      padding: 5px 8px;
+      font-size: 12px;
+   }
+   &_change_btn {
+      display: flex;
+      align-items: center;
+      border: none;
+   }
+}
+
+.no__task_found {
+   text-align: center;
+   color: #9a9a9a;
+}

@@ -1,0 +1,30 @@
+{
+  "user": {
+    "username": "Yura Serkiz ",
+    "password": "4180",
+    "isAuthorized": true
+  },
+  "todos": [
+    {
+      "id": 1,
+      "title": "Read a book",
+      "description": "Read the new novel that just came out.",
+      "checked": false,
+      "creationDate": "2023-12-29T13:30:00Z"
+    },
+    {
+      "title": "Go to run with friends",
+      "description": "",
+      "checked": false,
+      "creationDate": "2024-01-04T22:12:52.997Z",
+      "id": 4
+    },
+    {
+      "title": "Help mom and dad",
+      "description": "",
+      "checked": false,
+      "creationDate": "2024-01-07T16:31:24.833Z",
+      "id": 5
+    }
+  ]
+}

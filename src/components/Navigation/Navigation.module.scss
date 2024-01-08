@@ -1,0 +1,34 @@
+.header {
+   &__list {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+   }
+
+   &__item {
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+      font-size: 1rem;
+      transition: all 0.3s;
+
+      @media (any-hover: hover) {
+         &:hover {
+            color: #9be793;
+         }
+      }
+   }
+   &__btn_logout {
+      padding: 5px 10px;
+      border-radius: 5px;
+      background: transparent;
+      transition: all 0.3s;
+      border: 2px solid transparent;
+      background: #fff;
+      @media (any-hover: hover) {
+         &:hover {
+            background: none;
+            border: 2px solid #fff;
+            color: #fff;
+         }
+      }
+   }
+}

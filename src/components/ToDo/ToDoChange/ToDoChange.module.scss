@@ -1,0 +1,26 @@
+.todo__change {
+   max-width: 350px;
+   margin: 0 auto;
+   text-align: center;
+   color: #213358;
+   background: #fff;
+   border: 2px solid #000;
+   border-radius: 10px;
+   &_wrap {
+      padding: 20px;
+   }
+   &_text {
+      margin-bottom: 5px;
+   }
+   &_input {
+      margin-bottom: 10px;
+   }
+   &_link {
+      display: inline-block;
+      color: #fff;
+      background-color: #3aa15c;
+      border-radius: 5px;
+      padding: 8px 20px;
+      font-size: 12px;
+   }
+}

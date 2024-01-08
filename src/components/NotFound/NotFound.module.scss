@@ -1,0 +1,18 @@
+.page__notfound {
+   text-align: center;
+   height: 100vh;
+   display: flex;
+   place-items: center;
+   justify-content: center;
+   &_img {
+      margin-bottom: 10px;
+   }
+   &_btn {
+      font-size: 12px;
+      color: #fff;
+      background: #735cff;
+      margin: 0 auto;
+      padding: 15px 30px;
+      border-radius: 5px;
+   }
+}

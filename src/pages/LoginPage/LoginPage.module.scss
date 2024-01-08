@@ -1,0 +1,14 @@
+.login__form {
+   display: flex;
+   flex-direction: column;
+   gap: 10px;
+   padding: 20px;
+   width: 350px;
+   margin: 0 auto;
+   &_submit {
+      font-size: 1rem;
+      font-weight: 600;
+      padding: 10px 15px;
+      border-radius: 10px;
+   }
+}
