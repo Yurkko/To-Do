@@ -1,8 +1,11 @@
 # ToDo list
-## Quick Start
+### npm
 
 ```sh
-npx i
+npm i
+```
+```sh
+npm i
 npm run dev
 json-server db.json --watch --port 4000
 ```
