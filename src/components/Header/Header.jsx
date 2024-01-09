@@ -1,4 +1,3 @@
-import { useAuth } from '../../hooks/useAuth';
 import Navigation from '../Navigation/Navigation';
 import styles from './Header.module.scss';
 

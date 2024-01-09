@@ -7,8 +7,8 @@ import { useNavigate } from 'react-router-dom';
 const LoginPage = ({ errorUser, isErrorUser, isLoadingUser }) => {
    const [username, setUsername] = useState('');
    const [password, setPassword] = useState('');
+   const { sigin, isAuthorized, isLoading } = useAuth();
    const navigate = useNavigate();
-   const { sigin, isAuthorized } = useAuth();
 
    const handleSubmit = async e => {
       e.preventDefault();
@@ -47,8 +47,12 @@ const LoginPage = ({ errorUser, isErrorUser, isLoadingUser }) => {
                placeholder="Enter password"
                onChange={e => setPassword(e.target.value)}
             />
-            <button type="submit" className={styles.login__form_submit}>
-               Login
+            <button
+               type="submit"
+               className={styles.login__form_submit}
+               disabled={isLoading}
+            >
+               {isLoading ? 'Loading...' : 'Login'}
             </button>
          </form>
       </>

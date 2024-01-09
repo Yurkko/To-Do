@@ -3,7 +3,7 @@ import styles from './Navigation.module.scss';
 import { useAuth } from '../../hooks/useAuth';
 
 const Navigation = () => {
-   const { signout, isAuthorized } = useAuth();
+   const { signout, isAuthorized, isLoading } = useAuth();
 
    const getNavLinkClassName = ({ isActive }) =>
       isActive ? 'active-link' : '';
@@ -40,8 +40,9 @@ const Navigation = () => {
                         type="button"
                         className={styles.header__btn_logout}
                         onClick={logOut}
+                        disabled={isLoading}
                      >
-                        Logout
+                        {isLoading ? 'Loading...' : 'Logout'}
                      </button>
                   </li>
                ) : (

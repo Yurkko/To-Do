@@ -1,8 +1,8 @@
 {
-   "user": {
-      "username": "",
-      "password": "",
-      "isAuthorized": false
-   },
-   "todos": []
+  "user": {
+    "username": "",
+    "password": "",
+    "isAuthorized": false
+  },
+  "todos": []
 }
